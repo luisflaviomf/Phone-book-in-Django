@@ -1,13 +1,7 @@
 {% extends 'base.html' %}
 {% load bootstrap %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>teste</title>
-</head>
-<body>
+
     {% block body %}
     <form method="POST">
         {% csrf_token %}
@@ -16,11 +10,9 @@
             <tr>
               <td>{{form.name|bootstrap_horizontal:'col-lg-4'}}</td>
               <td>{{form.number|bootstrap_horizontal:'col-lg-4'}} </td>
-                <td><button type="submit" style="margin-top:35px" class="btn btn-success">Salvar</button></td>
+                <td><button type="submit" style="margin-top:35px" class="btn btn-success">Save</button></td>
             </tr>
           </tbody>
         </table>
         </form>
         {% endblock %}
-</body>
-</html>

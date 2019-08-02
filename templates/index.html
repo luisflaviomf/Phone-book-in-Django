@@ -9,7 +9,7 @@
               <th scope="col">Name</th>
               <th scope="col">Number</th>
               <th scope="col">Whatsapp</th>
-              <th scope="col">Deletar</th>
+              <th scope="col">Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -18,15 +18,15 @@
               <th scope="row">{{contato.id}}</th>
               <td>{{contato}}</td>
               <td>{{contato.number}}</td>
-              <td><a href="https://api.whatsapp.com/send?phone={{ contato.number }}&text=Olá, Tudo bem?"><img src="{% static 'img/iconfinder_whatsapp.png' %}"></a></td>
-                <td><a class="btn btn-outline-danger" href="{% url 'contatodelete' contato.id %}">deletar</a></td>
+              <td><a href="https://api.whatsapp.com/send?phone={{ contato.number }}&text=Hello!"><img src="{% static 'img/iconfinder_whatsapp.png' %}"></a></td>
+                <td><a class="btn btn-outline-danger" href="{% url 'contatodelete' contato.id %}">Delete</a></td>
             </tr>
           {% endfor %}
 
           </tbody>
 
         </table>
-        <a href="{% url 'contatocriar' %}"><button type="button" class="btn btn-primary table">Criar novo contato</button></a>
+        <a href="{% url 'contatocriar' %}"><button type="button" class="btn btn-primary table">Create new contact</button></a>
 
 
 {% endblock %}
